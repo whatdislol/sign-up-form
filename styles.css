@@ -1,5 +1,6 @@
 :root{
     --form-spacing: 1.5rem;
+    --input-max-length: 25rem;
 }
 *, *::before, *::after{
     box-sizing: border-box;
@@ -16,7 +17,7 @@
 }
 .illustration{
     display: flex;
-    flex: 1 1 35vw;
+    flex: 1 1 40vw;
     min-width: 25vw;
     background-image: url(resources/images/moving.jpg);
     background-size: cover;
@@ -45,14 +46,33 @@ h1{
 }
 .questions{
     flex-wrap: wrap;
-    width: 100%;
+    width: min(var(--input-max-length) * 2, 100%);
 }
 .questions > div{
     display: flex;
     flex-direction: column;
     padding: var(--form-spacing);
-    flex: 0 1 min(20rem, 50%);
+    flex: 0 1 min(var(--input-max-length), 50%);
     height: 4rem;
+}
+input{
+    position: relative;
+    border: 0.15rem black solid
+}
+input + span::after{
+    content: "";
+}
+input::after:required:invalid{
+    content: "required";
+}
+input:invalid{
+    border: 0.15rem red solid;
+}
+input:valid{
+    border: 0.15rem green solid;
+}
+input:focus{
+    border: 0.15rem blue solid;
 }
 form > div:last-child{
     padding: 0 var(--form-spacing);
