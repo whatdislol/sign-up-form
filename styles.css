@@ -1,0 +1,64 @@
+:root{
+    --form-spacing: 1.5rem;
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100vh;
+}
+.illustration{
+    display: flex;
+    flex: 1 1 35vw;
+    min-width: 25vw;
+    background-image: url(resources/images/moving.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.reference{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+}
+form{
+    display: flex; 
+    flex-direction: column;
+    flex: 2 1 60vw;
+    min-width: 35rem;
+}
+form > *{
+    display: flex;
+}
+h1{
+    margin: var(--form-spacing);
+    width: 100%;
+}
+.questions{
+    flex-wrap: wrap;
+    width: 100%;
+}
+.questions > div{
+    display: flex;
+    flex-direction: column;
+    padding: var(--form-spacing);
+    flex: 0 1 min(20rem, 50%);
+    height: 4rem;
+}
+form > div:last-child{
+    padding: 0 var(--form-spacing);
+}
+button{
+    width: 7rem;
+    height: 2rem;
+    align-items: center;
+    margin: var(--form-spacing);
+}
