@@ -96,6 +96,9 @@ input:required:invalid + span::after{
 input:invalid{
     border: 0.2rem red solid;
 }
+input:invalid[type="email"] + span::after{
+    content: "Please enter a valid email";
+}
 input#password:invalid + span::after{
     content: "Password requires a minimum of 8 characters"
 }
