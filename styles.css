@@ -1,4 +1,19 @@
+@font-face {
+    font-family: 'latomedium';
+    src: url('resources/fonts/lato-medium-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'norwesterregular';
+    src: url('resources/fonts/norwester-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
 :root{
+    font-family: "latomedium", Arial, Helvetica, sans-serif;
     --form-spacing: 1.5rem;
     --input-max-length: 25rem;
     --illustration-text: white;
@@ -39,9 +54,11 @@ a{
 .brand{
     align-items: center;
     padding: 1rem;
-    max-width: 6rem;
-    max-height: 3rem;
+    max-width: 8rem;
+    max-height: 5rem;
     background-color: #d2b48c;
+    font-family: norwesterregular, Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
 }
 .reference{
     align-items: flex-end;
@@ -64,27 +81,31 @@ h1{
 }
 .questions{
     flex-wrap: wrap;
-    width: min(var(--input-max-length) * 2, 100%);
+    width: 100%;
     background-image: url(resources/images/cardboard-background.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    padding: 2rem 0;
+    padding: 2.5rem 0;
     box-shadow: 0 1px 5px black;
 }
 .questions > div{
     flex-direction: column;
     justify-content: center;
-    padding: var(--form-spacing);
+    padding: 0.8rem var(--form-spacing);
     flex: 0 1 min(var(--input-max-length), 50%);
-    height: 4rem;
+    font-size: 1.1rem;
 }
 input{
     position: relative;
-    border: 0.15rem black solid
+    border: 0.15rem black solid;
+    background-color: #dbcdbb;
+    font-size: 0.9rem;
 }
 input ~ span{
     position: relative;
+    line-height: 1.25;
+    font-size: 0.8rem;
 }
 input + span::after{
     position: absolute;
@@ -112,8 +133,10 @@ form > div:last-child{
     padding: 0 var(--form-spacing);
 }
 button{
-    width: 7rem;
-    height: 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 10rem;
+    height: 2.5rem;
     align-items: center;
     justify-content: center;
     margin: var(--form-spacing);
