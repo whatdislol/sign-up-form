@@ -1,12 +1,16 @@
 :root{
     --form-spacing: 1.5rem;
     --input-max-length: 25rem;
+    --illustration-text: white;
 }
 *, *::before, *::after{
     box-sizing: border-box;
 }
 *{
     margin: 0;
+}
+a{
+    color: inherit;
 }
 .container{
     display: flex;
@@ -17,19 +21,32 @@
 }
 .illustration{
     display: flex;
+    flex-direction: column;
     flex: 1 1 40vw;
     min-width: 25vw;
     background-image: url(resources/images/moving.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    color: var(--illustration-text);
 }
+.brand,
 .reference{
     display: flex;
-    flex: 1;
+    flex: auto;
     justify-content: center;
+}
+.brand{
+    align-items: center;
+    padding: 1rem;
+    max-width: 6rem;
+    max-height: 3rem;
+    background-color: #d2b48c;
+}
+.reference{
     align-items: flex-end;
-    margin-bottom: 1rem;
+    margin: 1rem;
+    
 }
 form{
     display: flex; 
