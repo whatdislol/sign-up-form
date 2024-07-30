@@ -66,16 +66,16 @@ input:required:invalid + span::after{
     content: "*required";
 }
 input:invalid{
-    border: 0.15rem red solid;
+    border: 0.2rem red solid;
 }
 input#password:invalid + span::after{
     content: "Password requires a minimum of 8 characters"
 }
 input:valid{
-    border: 0.15rem green solid;
+    border: 0.2rem green solid;
 }
 input:focus{
-    border: 0.3rem blue solid;
+    border: 0.2rem blue solid;
 }
 form > div:last-child{
     padding: 0 var(--form-spacing);
@@ -85,4 +85,5 @@ button{
     height: 2rem;
     align-items: center;
     margin: var(--form-spacing);
+    margin-top: calc(var(--form-spacing) * 2);
 }
