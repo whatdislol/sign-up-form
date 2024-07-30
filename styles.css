@@ -53,6 +53,7 @@ form{
     flex-direction: column;
     flex: 2 1 60vw;
     min-width: 35rem;
+    background-color: #d2b48c;
 }
 form > *{
     display: flex;
@@ -64,10 +65,17 @@ h1{
 .questions{
     flex-wrap: wrap;
     width: min(var(--input-max-length) * 2, 100%);
+    background-image: url(resources/images/cardboard-background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 2rem 0;
+    box-shadow: 0 1px 5px black;
 }
 .questions > div{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: var(--form-spacing);
     flex: 0 1 min(var(--input-max-length), 50%);
     height: 4rem;
@@ -76,7 +84,11 @@ input{
     position: relative;
     border: 0.15rem black solid
 }
+input ~ span{
+    position: relative;
+}
 input + span::after{
+    position: absolute;
     content: "";
 }
 input:required:invalid + span::after{
@@ -102,5 +114,5 @@ button{
     height: 2rem;
     align-items: center;
     margin: var(--form-spacing);
-    margin-top: calc(var(--form-spacing) * 2);
+    background-color: #f8fc1a;
 }
