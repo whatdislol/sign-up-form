@@ -46,17 +46,17 @@ a{
 .reference{
     align-items: flex-end;
     margin: 1rem;
-    
+}
+form,
+form > *,
+.questions > div{
+    display: flex;
 }
 form{
-    display: flex; 
     flex-direction: column;
     flex: 2 1 60vw;
     min-width: 35rem;
     background-color: #d2b48c;
-}
-form > *{
-    display: flex;
 }
 h1{
     margin: var(--form-spacing);
@@ -73,7 +73,6 @@ h1{
     box-shadow: 0 1px 5px black;
 }
 .questions > div{
-    display: flex;
     flex-direction: column;
     justify-content: center;
     padding: var(--form-spacing);
@@ -113,6 +112,12 @@ button{
     width: 7rem;
     height: 2rem;
     align-items: center;
+    justify-content: center;
     margin: var(--form-spacing);
     background-color: #f8fc1a;
+    border: none;
+    border-radius: 0.5rem;
+}
+button:hover{
+    background-color: #feffbc;
 }
